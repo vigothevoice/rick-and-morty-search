@@ -1,0 +1,12 @@
+@import '../../assets/style/variables';
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 5% 0% 5% 0%;
+    flex-flow: wrap;
+
+    a {
+        padding: 5px;
+    }
+}

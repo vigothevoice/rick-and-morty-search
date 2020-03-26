@@ -1,0 +1,36 @@
+@import '../../assets/style/variables.scss';
+
+.form {
+    width: 100%;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.input {
+    width: 70%;
+    height: 40px;
+    border-radius: $border-radius;
+    border: none;
+    box-shadow: $box-shadow;
+    padding-left: 30px;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+button {
+    width: 20%;
+    height: 40px;
+    margin-left: 5%;
+    background-color: $dark-blue;
+    border: none;
+    border-radius: $border-radius;
+    color: $white;
+
+    &:hover {
+        background-color: $pink;
+    }
+
+}

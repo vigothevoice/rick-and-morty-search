@@ -1,0 +1,48 @@
+@import './variables';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 62.5%;
+    color: $dark-grey;
+}
+
+a {
+    font-size: 1.4em;
+    text-decoration: none;
+    color: inherit;
+}
+
+p, li {
+    font-size: 1.4em;
+    @include for_breakpoint(mobile tablet) {
+        font-size: 1.2em;
+    }
+}
+
+ul, li {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+h1 {
+    font-size: 3em;
+    @include for_breakpoint(mobile tablet) {
+        font-size: 3em;
+    }
+}
+
+h2 { 
+    font-size: 1.4em;
+    @include for_breakpoint(mobile tablet) {
+        font-size: 1.5em;
+    }
+}
+
+h3, h4, h5 {
+    font-size: 1.6em;
+}
+
+/* media queries */
+

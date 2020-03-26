@@ -1,0 +1,46 @@
+
+/*colors */
+$white: #ffffff;
+$lighter-grey: #EFEFEF;
+$light-grey: #C9C9C9;
+$dark-grey: #707070;
+$light-green: #01C49A;
+$dark-green: #00745D;
+$pink: #EA73C5;
+$dark-blue: #101626;
+
+
+/* elements features */
+$border-radius: 25px;
+$box-shadow: 0 10px 20px rgba(16,22,38,0.05), 0 6px 6px rgba(16,22,38,0.05);
+$hover-box-shadow:  0 10px 20px rgba(16,22,38,0.05), 0 0px 2px rgba(16,22,38,0.05);
+
+/* media queries */
+$size__site_content_width: 667px;
+
+$media_queries : (
+    'mobile'    : "only screen and (max-width: 667px)",
+    'tablet'  : "only screen and (min-width: 668px) and (max-width: 1024px)",
+    'desktop' : "only screen and (min-width: 1025px)",
+    // 'retina2 '  : "only screen and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi)",
+    // 'retina3 '  : "only screen and (-webkit-min-device-pixel-ratio: 3) and (min-resolution: 288dpi)",
+    // 'landscape' : "screen and (orientation:landscape) ",    
+    // 'portrait'  : "screen and (orientation:portrait) "
+);
+
+@mixin for_breakpoint($breakpoints) {
+    $conditions : ();
+    @each $breakpoint in $breakpoints {
+        // If the key exists in the map
+        $conditions: append(
+            $conditions,
+            #{inspect(map-get($media_queries, $breakpoint))},
+            comma
+        );
+    }
+
+    @media #{$conditions} {
+        @content;
+    }
+
+}

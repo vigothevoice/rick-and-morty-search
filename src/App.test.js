@@ -1,15 +1,27 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import { Provider } from 'react-redux';
-import store from './app/store';
-import App from './App';
+import React from "react";
+import { shallow } from "enzyme";
+import App from "./App";
+import Pagination from "./components/Pagination/Pagination";
 
-test('renders learn react link', () => {
-  const { getByText } = render(
-    <Provider store={store}>
-      <App />
-    </Provider>
-  );
+jest.mock("react-redux", () => ({
+  useDispatch: () => {},
+  useSelector: () => {}
+}));
 
-  expect(getByText(/learn/i)).toBeInTheDocument();
+
+describe("<App />", () => {
+  let wrapper;
+  wrapper = shallow(<App />);
+
+  const useStateSpy = jest.spyOn(React, "useState");
+
+  it("checks if Pagination is rendered", () => {
+    expect(wrapper.find(Pagination)).toBeTruthy();
+  });
+
+  it("checks if loading is true when load", () => {
+    expect(wrapper.find(<p class="loading"></p>));
+    expect(useStateSpy).toBeTruthy();
+  });
+
 });

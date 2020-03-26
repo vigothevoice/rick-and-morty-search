@@ -1,0 +1,26 @@
+@import '../../assets/style/variables.scss';
+
+.wrapper {
+    background: $light-green;
+    height: 60px;
+    padding: 1em 2em 1em 2em;
+    display: flex;;
+}
+
+.wrapperInner  {
+    background: $light-green;
+    height: 150px;
+    padding: 1em 2em 1em 2em;
+    display: flex;;
+}
+
+
+.logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.logoInner {
+    display: none;
+}

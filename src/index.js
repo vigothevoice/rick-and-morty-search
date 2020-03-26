@@ -1,10 +1,16 @@
+import 'react-app-polyfill/ie11';
+import 'react-app-polyfill/stable';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.module.scss';
+import main from './assets/style/main.scss';
 import App from './App';
-import store from './app/store';
-import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
+import { configureStore  } from "@reduxjs/toolkit";
+import  rootReducer  from './reducer/index';
+import { Provider } from 'react-redux';
+
+const store = configureStore({reducer: rootReducer.reducer })
 
 ReactDOM.render(
   <Provider store={store}>

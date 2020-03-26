@@ -1,0 +1,30 @@
+@import '../../assets/style/variables';
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    @include for_breakpoint(mobile tablet) {
+        display: block;
+    }    
+
+    a {
+        width: 32%;
+        margin-right: 1%;
+        @include for_breakpoint(mobile tablet) {
+            width: 100%;
+        }    
+    
+    }
+}
+
+.title {
+    text-align: center;
+}
+
+
+.noresult {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 5%;
+}

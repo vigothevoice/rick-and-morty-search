@@ -1,0 +1,37 @@
+@import "../../assets/style/variables.scss";
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 5%;
+  position: absolute;
+  width: 100%;
+  top: 10px;
+
+  @include for_breakpoint(desktop) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 96%;
+    padding-left: 2%;
+    padding-right: 2%;
+}    
+
+}
+
+
+.loading {
+  text-align: center;
+  font-size: 2em;
+  width: 100%;
+  margin-top: 200px;
+}
+
+.goback {
+  position: absolute;
+  top: 20px;
+  left: 15px;
+  color: white;
+  font-size: 1em;
+}

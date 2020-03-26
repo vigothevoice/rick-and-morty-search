@@ -3,12 +3,6 @@ import { shallow } from "enzyme";
 import App from "./App";
 import Pagination from "./components/Pagination/Pagination";
 
-jest.mock("react-redux", () => ({
-  useDispatch: () => {},
-  useSelector: () => {}
-}));
-
-
 describe("<App />", () => {
   let wrapper;
   wrapper = shallow(<App />);
